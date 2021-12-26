@@ -1,0 +1,337 @@
+/*상단부*/
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "NanumSquare", sans-serif;
+}
+
+header {
+  width: 1056px;
+  height: 100px;
+  margin: auto;
+}
+
+div.crossing-line {
+  border-bottom: 1px solid #f3f3f3;
+  width: 100%;
+}
+
+.banner {
+  width: 1056px;
+  height: 160px;
+  padding: 16px 16px 16px 16px;
+  display: flex;
+  margin: auto;
+}
+
+/*배너*/
+
+.banner img {
+  width: 128px;
+  height: 128px;
+  overflow: hidden;
+  border-radius: 50%;
+  text-align: center;
+  object-fit: cover;
+}
+.banner h1 {
+  margin-left: 25px;
+  position: relative;
+  top: 50%;
+  height: 91px;
+  transform: translateY(-30%);
+}
+
+/* tab과 그 메뉴들 */
+
+.tabs {
+  width: 100%;
+  height: 100%;
+  border-bottom: 2px solid #f3f3f3;
+  overflow: hidden;
+  margin: auto;
+}
+
+.tabs_sidebar {
+  display: flex;
+  padding-left: 20px;
+  width: 1056px;
+  margin: auto;
+}
+.tabs_sidebar li {
+  display: inline;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 10px;
+  margin-right: 50px;
+  font-size: 20px;
+  color: #9e9e9e;
+}
+
+.tabs_sidebar li.active {
+  color: black;
+  border-bottom: 3px solid black;
+}
+
+.tabs_sidebar li:hover {
+  color: black;
+}
+
+/* 프로필 페이지에 들어가는 컴포넌트들 정의*/
+
+.content {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 36px 0px 36px 0px;
+  width: 1056px;
+  margin: auto;
+}
+
+[data-tab-content] {
+  display: none;
+}
+
+.active[data-tab-content] {
+  display: flex;
+}
+
+.profile {
+  flex-basis: 100%;
+}
+.account {
+  flex-basis: 100%;
+}
+.challenge {
+  flex-basis: 100%;
+}
+
+.comp {
+  flex-wrap: wrap;
+  width: 50%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-bottom: 20px;
+}
+.comp-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.comp-title {
+  font-size: 20px;
+}
+
+.update-btn {
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: rgb(39, 163, 255);
+}
+
+.comp-content {
+  display: flex;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 16px;
+}
+
+.comp-password {
+  display: flex;
+  margin-left: 16px;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.comp-img {
+  width: 128px;
+  height: 128px;
+  overflow: hidden;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.comp-img img {
+  width: 128px;
+  height: 128px;
+  object-fit: cover;
+}
+
+.inputBox {
+  display: block;
+  width: 70%;
+  height: 40px;
+  margin: 16px;
+  padding-left: 14px;
+  max-height: 44px;
+  border: 1px solid rgba(184, 184, 184, 0.5);
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.inputBox2 {
+  display: block;
+  width: 70%;
+  height: 24px;
+  margin: 32px 16px 0px 16px;
+  padding-left: 14px;
+  max-height: 44px;
+  border: 1px solid rgba(184, 184, 184, 0.5);
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.textBox {
+  display: block;
+  width: 70%;
+  max-width: 70%;
+  height: 200px;
+  max-height: 200px;
+  margin: 16px;
+  padding: 12px;
+  border: 1px solid rgba(184, 184, 184, 0.5);
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.submitBox {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  width: 120px;
+  margin: 16px 16px 16px 16px;
+  text-align: center;
+  max-height: 44px;
+  background-color: rgb(56, 56, 56);
+  color: white;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 700;
+  border: 0;
+  outline: 0;
+}
+
+label.submitBox {
+  background-color: rgba(163, 163, 163, 0.85);
+  margin-right: 0px;
+}
+
+.submitBox:hover {
+  background-color: rgba(184, 184, 184, 0.7);
+}
+
+#image-form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* 챌린지들 표시할 각각의 카드들 정의*/
+
+.card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  width: 100%;
+}
+.card {
+  display: block;
+  width: 25%;
+  padding: 0px 12px;
+  padding-bottom: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.card img {
+  display: block;
+  align-self: center;
+  width: 240px;
+  height: 184px;
+  cursor: pointer;
+  position: absolute;
+  overflow: hidden;
+}
+
+.card section {
+  display: flex;
+}
+
+.category-tag {
+  text-align: left;
+  font-size: 11px;
+  color: grey;
+  line-height: 18px;
+  letter-spacing: -0.005em;
+}
+
+.card div a {
+  font-size: 16px;
+  text-decoration: none;
+  color: rgb(61, 61, 61);
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.card-title {
+  min-height: 50px;
+  text-align: left;
+}
+
+.card-joinusers {
+  font-size: 12px;
+  text-decoration: none;
+  text-align: left;
+  color: rgb(253, 95, 130);
+  font-weight: 700;
+  width: 25%;
+}
+
+.challenge-condition {
+  font-size: 12px;
+  text-decoration: none;
+  text-align: left;
+  font-weight: 700;
+  width: 50%;
+}
+
+.challenge-condition#color1 {
+  color: rgb(255, 0, 119);
+}
+
+.challenge-condition#color2 {
+  color: rgb(136, 136, 136);
+}
+
+.challenge-condition#color3 {
+  color: rgba(247, 19, 19, 0.801);
+}
+
+.user-img-wrapper {
+  width: 246px;
+  height: 184px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.user-img-wrapper img {
+  display: block;
+  align-self: center;
+  width: 240px;
+  height: 184px;
+  cursor: pointer;
+  position: absolute;
+  overflow: hidden;
+c}
+
+.user-img-wrapper img:hover {
+  transform: scale(1.07);
+  transition: transform 0.2s ease-in;
+}
